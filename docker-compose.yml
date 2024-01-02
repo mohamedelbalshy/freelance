@@ -1,0 +1,18 @@
+services:
+  postresql:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: 1234
+      POSTGRES_DB: go_freelance
+    volumes:
+      - ~/apps/postgres/go_freelance:/var/lib/postgresql/data
+    ports:
+      - '5432:5432'
+
+    networks:
+      - go_freelance
+
+networks:
+  go_freelance:

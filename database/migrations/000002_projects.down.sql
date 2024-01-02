@@ -1,0 +1,2 @@
+drop TABLE IF EXISTS projects;
+drop TYPE  IF EXISTS PRJECT_TYPE;
